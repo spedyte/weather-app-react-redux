@@ -16,7 +16,7 @@ import {SUNNYDAY,SUNNNIGHT,PCDAY,PCNIGHT,
         return data;
     }
 const  getTemp=(kelvin)=>{
-        return convert(kelvin).from('K').to('C').toFixed(1);
+        return Number(convert(kelvin).from('K').to('C').toFixed(1));
     }
  const getWeatherState=(weatherState)=>{
         return SNOW;
