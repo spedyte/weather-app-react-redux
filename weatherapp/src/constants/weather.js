@@ -1,0 +1,10 @@
+export const SUNNYDAY="CLEAR_DAY";
+export const SUNNNIGHT="CLEAR_NIGHT";
+export const PCDAY="PARTLY_CLOUDY_DAY";
+export const PCNIGHT="PARTLY_CLOUDY_NIGHT";
+export const CLOUD="CLOUDY";
+export const RAIN="RAIN";
+export const SLEET="SLEET";
+export const SNOW="SNOW";
+export const WIND="WIND";
+export const FOG ="FOG";
