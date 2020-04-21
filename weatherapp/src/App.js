@@ -5,6 +5,7 @@ import LocationList from './Components/LocationList'
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
 import './App.css';
+import ForecastExtended from './Components/ForecastExtended'
 
 const cities=['Mexico city',
 'Seattle',
@@ -13,11 +14,21 @@ const cities=['Mexico city',
 'Madrid'];
 
 class App extends Component {
+
+  constructor(){
+    super();
+    this.state={
+      city:null
+    }
+  }
+
   handleSelectedLocation=city=>{
     console.log(`handleSelectedLocation : ${city}`);
+    this.setState({city});
   }
 
   render() {
+    const {city}=this.state;
     return (<MuiThemeProvider>
       <div className="App">
         <Grid>
@@ -32,7 +43,12 @@ class App extends Component {
             </Col>
             <Col xs={12} md={6}>
               <Paper zDepth={4}>
-                <div className='detail'></div>
+                <div className='detail'>
+                  {
+                    city && 
+                    <ForecastExtended city={city}></ForecastExtended>
+                  }
+                </div>
               </Paper>
             </Col>
           </Row>
