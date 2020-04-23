@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WeatherData from './../WeatherLocation/WeatherData';
 
+
+//Componente Funcional para renderizar la data del pronostico del clima
 const ForecastItem =({weekDay,hour,data})=>(
 <div>
     <h3>{weekDay}- {hour} hrs</h3>

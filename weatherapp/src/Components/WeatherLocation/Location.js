@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css';
 
+//Componente funcional que muestra la ciudad recibidad como parametro en la Props
 const Location =({city}) =>(
     //const {city}=props;//destructuring
     <div className='locationCont'>

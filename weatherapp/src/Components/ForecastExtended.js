@@ -7,6 +7,7 @@ import transformForecast from './../services/transformForecast';
 const key='f99bbd9e4959b513e9bd0d7f7356b38d';
 const url='http://api.openweathermap.org/data/2.5/forecast';
 
+//Clase que encapsula el array de componentes ForecastItem
 class ForecastExtended extends Component{
 
     constructor(){
@@ -42,7 +43,6 @@ class ForecastExtended extends Component{
     }
 
     componentDidMount() {
-        //fetch or axios
         this.updateCity(this.props.city);
     }
 
@@ -60,7 +60,7 @@ class ForecastExtended extends Component{
         //const {city} = this.props;
         const url_forecast=`${url}?q=${city}&appid=${key}`;
         console.log(url_forecast);
-
+        //fetch or axios
         fetch(url_forecast).then(data=>{
             return data.json();
         }).then(weather_data=>{
