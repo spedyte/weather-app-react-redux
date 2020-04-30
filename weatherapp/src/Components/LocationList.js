@@ -21,9 +21,10 @@ const LocationList=({cities,onSelectedLocation})=>{
     //Importante agregar el KEY a cada elemento para ayudar en el perfomarce de Re-Rendering
     const strToComponent = cities =>(
         cities.map(city => (<WeatherLocation 
-                                key={city} 
-                                city={city} 
-                                onWeatherLocationClick={()=>handleWeatherLocationclick(city)}/>))
+                                key={city.key} 
+                                city={city.name} 
+                                onWeatherLocationClick={()=>handleWeatherLocationclick(city.name)}
+                                data={city.data}/>))
     );
     
     return(
